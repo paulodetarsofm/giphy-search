@@ -1,13 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { SettingsEnum } from '../../shared/enum/settings.enum';
 import { GiphyResponse } from '../model/giphy-response.model';
 
 @Injectable()
 export class GiphySearchService {
 
   private readonly BASE_URL = 'https://api.giphy.com/v1/gifs/search';
-  private readonly API_KEY_SEARCH = '[YOUR-GIPHY-API-KEY]';
+  private readonly API_KEY_SEARCH = SettingsEnum.GIPHY_SEARCH_API;
 
   constructor(
     private http: HttpClient
