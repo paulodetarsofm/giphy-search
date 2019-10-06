@@ -1,0 +1,10 @@
+<ul *ngIf="gifsList && gifsList.length">
+  <li *ngFor="let gif of gifsList">
+    <a
+      target="_blank"
+      [href]="gif?.url"
+    >
+      <img [src]="gif?.images?.fixed_width?.url">
+    </a>
+  </li>
+</ul>

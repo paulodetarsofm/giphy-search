@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+
+  $this-space: 15px;
+
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: $this-space;
+
+  list-style-type: none;
+
+  li {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 220px;
+    height: 220px;
+    padding: $this-space;
+    margin: {
+      bottom: $this-space;
+      left: $this-space;
+    };
+
+    background-color: #f3f3f3;
+    border-radius: 4px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+
+    img {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+}

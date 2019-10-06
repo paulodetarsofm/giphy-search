@@ -1,0 +1,33 @@
+<form
+  [formGroup]="searchForm"
+  (ngSubmit)="search()"
+>
+
+  <label for="input-term">
+    Term:
+    <input
+      type="text"
+      id="input-term"
+      formControlName="term"
+      required
+      autofocus
+    >
+  </label>
+
+  <label for="input-limit">
+    Limit:
+    <input
+      type="number"
+      id="input-limit"
+      formControlName="limit"
+      required
+    >
+  </label>
+
+  <button type="submit">
+    Pesquisar
+  </button>
+
+</form>
+
+<app-giphy-search-list [gifsList]="gifs"></app-giphy-search-list>
